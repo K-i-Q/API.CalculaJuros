@@ -5,7 +5,7 @@ namespace Domain.Dtos
     [Serializable]
     public class CalculoDtoResponse
     {
-        public decimal TaxaJuros { get; set; }
+        public decimal ValorFinal { get; set; }
         public string Mensagem { get; set; }
     }
 

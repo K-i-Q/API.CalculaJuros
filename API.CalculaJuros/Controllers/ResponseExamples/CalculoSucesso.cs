@@ -9,6 +9,7 @@ namespace API.CalculaJuros.Controllers.ResponseExamples
         {
             return new CalculoDtoResponse
             {
+                ValorFinal = 105.10m
             };
         }
     }

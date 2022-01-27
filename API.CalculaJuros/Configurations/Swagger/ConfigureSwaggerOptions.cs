@@ -34,12 +34,12 @@ namespace API.CalculaJuros.Configurations.Swagger
         {
             var info = new OpenApiInfo()
             {
-                Title = "API.Juros",
+                Title = "API.CalculaJuros",
                 Version = $"v{description.ApiVersion}",
-                Description = "APIs - API.Juros",
+                Description = "APIs - API.CalculaJuros",
                 Contact = new OpenApiContact
                 {
-                    Name = "API.Juros"
+                    Name = "API.CalculaJuros"
                 }
             };
 

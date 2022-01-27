@@ -9,7 +9,8 @@ namespace API.CalculaJuros.Controllers.RequestExamples
         {
             return new CalculoDtoRequest
             {
-
+                Meses = 5,
+                ValorInicial = 100
             };
         }
     }

@@ -2,7 +2,8 @@
 {
     public class CalculoDtoRequest
     {
-        public decimal TaxaJuros { get; set; }
+        public decimal ValorInicial { get; set; }
+        public int Meses { get; set; }
     }
 
 }
