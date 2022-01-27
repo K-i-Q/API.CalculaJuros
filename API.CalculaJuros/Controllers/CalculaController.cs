@@ -12,18 +12,18 @@ namespace API.CalculaJuros.Controllers
 {
     [ApiController]
     [Route("v1/Calcula")]
-    public class JurosController : Controller
+    public class CalculaController : Controller
     {
         private readonly ICalculoCommandHandler _calculoCommandHandler;
-        public JurosController(ICalculoCommandHandler calculoCommandHandler)
+        public CalculaController(ICalculoCommandHandler calculoCommandHandler)
         {
             _calculoCommandHandler = calculoCommandHandler;
         }
 
         [ProducesResponseType(typeof(CalculoDtoResponse), 200)]
         [SwaggerRequestExample(typeof(CalculoDtoRequest), typeof(CalculoRequestExample))]
-        [HttpPost("calculaJuros")]
-        public async Task<IActionResult> CalculaJuros([FromBody] CalculoDtoRequest request)
+        [HttpGet("calculaJuros")]
+        public async Task<IActionResult> CalculaJuros([FromQuery] CalculoDtoRequest request)
         {
             try
             {

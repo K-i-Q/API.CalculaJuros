@@ -21,15 +21,15 @@ namespace API.CalculaJuros.CommandHandlers.Handlers
             var response = new CalculoDtoResponse();
             try
             {
-                _jurosRemoteService.Api = "api/Juros/";
+                _jurosRemoteService.Api = "v1/Juros/";
                 _jurosRemoteService.Metodo = "consultar";
                 _jurosRemoteService.HttpMethod = HttpMethod.Get;
-
+                _jurosRemoteService.Body = new { };
                 var jObjectResult = await _jurosRemoteService.Executar();
 
-                if (jObjectResult["successResult"] != null)
+                if (jObjectResult != null)
                 {
-                    var taxaJuros = jObjectResult["successResult"]["taxaJuros"].ToObject<decimal>();
+                    var taxaJuros = jObjectResult["taxaJuros"].ToObject<decimal>();
 
                     var potenciaResult = Math.Pow(Convert.ToDouble((1 + taxaJuros)), Convert.ToDouble(request.Meses));
 

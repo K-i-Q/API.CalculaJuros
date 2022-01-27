@@ -2,16 +2,11 @@ using API.CalculaJuros.Configurations;
 using API.CalculaJuros.Configurations.Swagger;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text.Json.Serialization;
-using System.Threading.Tasks;
 
 namespace API.CalculaJuros
 {
@@ -36,8 +31,10 @@ namespace API.CalculaJuros
                 });
 
             services.AddCommandsConfiguration()
-                     .AddVersionConfiguration()
-                     .AddSwaggerConfiguration();
+                    .AddServicesConfiguration()
+                    .AddVersionConfiguration()
+                    .AddSwaggerConfiguration()
+                    .AddApiHTTPClientConfiguration(Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

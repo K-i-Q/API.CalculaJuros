@@ -20,9 +20,6 @@ namespace Infra.Services.Remotes
         /// request ao autoruzador
         /// </summary>
         public HttpRequestMessage Request { get; set; }
-        /// <summary>
-        /// EsppRef example=680d2b892-5ead-4d83-a8db-ffc3244bad3f
-        /// </summary>
         public string Api { get; set; }
         public string Metodo { get; set; }
         public HttpMethod HttpMethod { get; set; }
